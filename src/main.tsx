@@ -1,3 +1,5 @@
+import { TelemetryPreferences } from './AnalyticsNotice';
+import { trackEvent } from './analytics';
 import React, { useEffect, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 import {
@@ -129,8 +131,10 @@ function App() {
           title: "MUCOSA Career Day 2026",
           text: caption,
         });
+        trackEvent('flyer_shared', { format: state.format, design: state.design });
       } else {
         save(b);
+        trackEvent('flyer_downloaded', { format: state.format, design: state.design });
         setNotice(
           share
             ? "Flyer downloaded. Share it with the caption below!"
@@ -146,6 +150,7 @@ function App() {
   }
   return (
     <>
+      <TelemetryPreferences />
       <nav className="nav">
         <a href="#" className="brand">
           <span className="brand-symbol">

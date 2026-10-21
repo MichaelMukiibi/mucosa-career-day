@@ -1237,3 +1237,46 @@ footer > span {
     animation: none !important;
   }
 }
+
+.telemetry-preferences {
+  margin-top: 24px;
+}
+.telemetry-preferences > button {
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+.telemetry-notice {
+  position: fixed;
+  z-index: 100;
+  bottom: 16px;
+  right: 16px;
+  width: min(520px, calc(100vw - 32px));
+  max-height: calc(100dvh - 32px);
+  overflow-y: auto;
+  background: #fff;
+  color: #09172f;
+  box-shadow: 0 12px 48px #09172f30;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+.telemetry-notice h2 {
+  font-size: 24px;
+}
+.telemetry-notice p {
+  color: #475569;
+  max-width: 720px;
+  margin-block: 12px 20px;
+}
+.telemetry-notice .button {
+  cursor: pointer;
+}
+
+.telemetry-preferences { position: fixed; right: 16px; bottom: 16px; z-index: 100; margin: 0; }
+.telemetry-preferences > button { padding: 8px 12px; border-radius: 8px; background: white; color: #09172f; box-shadow: 0 2px 12px #09172f20; }
+.telemetry-notice .button-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.telemetry-notice .button { padding: 12px 16px; border: 1px solid #cbd5e1; border-radius: 8px; background: white; color: #09172f; }
+.telemetry-notice .button-primary { background: #123b86; color: white; }
+.telemetry-notice .text-link { color: #123b86; background: none; border: 0; text-decoration: underline; cursor: pointer; }
