@@ -60,3 +60,7 @@ Background removal is not included; portraits retain their background.
 4. Download each format and confirm exact PNG dimensions and visible event information.
 5. On a mobile browser, verify editing steps, file sharing (or fallback download), and caption copy.
 6. Verify that image data never appears in network requests.
+
+## Analytics
+
+See docs/TELEMETRY.md and .env.example. Use the same public PostHog project key and ingestion host as the main website in the build environment. Configured analytics starts automatically with a visible arrival notice and opt-out. Names, photos, captions, and flyer contents are not collected. Run pnpm test:telemetry to check the telemetry layer.

@@ -8,18 +8,21 @@
     "dev": "vite --host 0.0.0.0",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
+    "test:telemetry": "node --test tests/telemetry.test.mjs",
     "deploy": "pnpm build && wrangler deploy"
   },
   "dependencies": {
+    "lucide-react": "^0.468.0",
+    "posthog-js": "1.438.12",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "lucide-react": "^0.468.0"
+    "web-vitals": "6.2.3"
   },
   "devDependencies": {
+    "@tailwindcss/vite": "^4.1.0",
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
     "@vitejs/plugin-react": "^5.0.0",
-    "@tailwindcss/vite": "^4.1.0",
     "tailwindcss": "^4.1.0",
     "typescript": "~5.9.3",
     "vite": "^7.1.0",
